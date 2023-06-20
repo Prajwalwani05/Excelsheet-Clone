@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excel</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./images/excel-svgrepo-com (1).png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div>
+        <span
+          ><svg
+            width="64px"
+            height="64px"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#CCCCCC"
+              stroke-width="1.216"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <title>file_type_excel2</title>
+              <path
+                d="M28.781,4.405H18.651V2.018L2,4.588V27.115l16.651,2.868V26.445H28.781A1.162,1.162,0,0,0,30,25.349V5.5A1.162,1.162,0,0,0,28.781,4.405Zm.16,21.126H18.617L18.6,23.642h2.487v-2.2H18.581l-.012-1.3h2.518v-2.2H18.55l-.012-1.3h2.549v-2.2H18.53v-1.3h2.557v-2.2H18.53v-1.3h2.557v-2.2H18.53v-2H28.941Z"
+                style="fill: #ffffff; fill-rule: evenodd"
+              ></path>
+              <rect
+                x="22.487"
+                y="7.439"
+                width="4.323"
+                height="2.2"
+                style="fill: #ffffff"
+              ></rect>
+              <rect
+                x="22.487"
+                y="10.94"
+                width="4.323"
+                height="2.2"
+                style="fill: #ffffff"
+              ></rect>
+              <rect
+                x="22.487"
+                y="14.441"
+                width="4.323"
+                height="2.2"
+                style="fill: #ffffff"
+              ></rect>
+              <rect
+                x="22.487"
+                y="17.942"
+                width="4.323"
+                height="2.2"
+                style="fill: #ffffff"
+              ></rect>
+              <rect
+                x="22.487"
+                y="21.443"
+                width="4.323"
+                height="2.2"
+                style="fill: #ffffff"
+              ></rect>
+              <polygon
+                points="6.347 10.673 8.493 10.55 9.842 14.259 11.436 10.397 13.582 10.274 10.976 15.54 13.582 20.819 11.313 20.666 9.781 16.642 8.248 20.513 6.163 20.329 8.585 15.666 6.347 10.673"
+                style="fill: #226d35; fill-rule: evenodd"
+              ></polygon>
+            </g></svg
+        ></span>
+    </div>
+        <div>
+        <span>AutoSave</span></div>
+       <div><span class="material-symbols-outlined"> save </span>
+
+        <span class="material-symbols-outlined"> undo </span>
+
+        <span class="material-symbols-outlined"> expand_more </span>
+
+        <span class="material-symbols-outlined"> redo </span>
+
+        <span class="material-symbols-outlined"> expand_more </span> &nbsp;
+    </div> 
+    <div><span>Book1</span></div>
+      </div>
+      <div class="header-mid">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="header-right">
+        <span>Prajwal Wani
+            <img src="./images/7f562013274885.5ced67c495660.jpg" width="20px" alt="" ></span>
+       <span class="material-symbols-outlined"> minimize </span>
+        <span class="material-symbols-outlined"> check_box_outline_blank </span>
+        <span class="material-symbols-outlined"> close </span>
+      </div>
+    </header>
+    <nav>
+        <div id="rowColNum"></div>
+    </nav>
+    <div class="table-container">
+    <table id="my-table">
+      <thead class="thead">
+        <tr id="head-row">
+          <th class="empty-th"></th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
+</div>
+    <footer>
+        <span class="material-symbols-outlined">
+            chevron_left
+            </span>
+            <span>Sheet1</span>
+            <span class="material-symbols-outlined">
+                chevron_right
+                </span>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inconsolata', monospace;
+}
+body::-webkit-scrollbar{
+    height: 8px;
+    width: 8px;
+}
+body::-webkit-scrollbar-track{
+    background-color:gray;
+    border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:green;
+    border-radius: 20px;
+}
+/* Header Styling */
+
+header{
+   width: 100%;
+   background-color: green;
+   height: 40px;
+   font-size: 15px;
+   font-weight: 400;
+   position: fixed;
+   top: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.header-left{
+    display: flex;
+    gap: 15px;
+    align-items:center;
+    margin-left: 10px;
+}
+.material-symbols-outlined{
+    font-size: 20px !important;
+    font-weight: 200 !important;
+    color: white;
+}
+.header-left span{
+    cursor: pointer;
+}
+.header-left span > svg{
+  width: 20px;
+}
+.header-mid{
+    display: flex;
+    align-items: center;
+}
+.header-mid >input{
+    width: 400px;
+    height: 27px;
+    border-radius: 5px;
+    background-color: rgb(221, 244, 221);
+    outline: none;
+    border: none;
+    padding-left:5px;
+}
+.header-mid >input::placeholder{
+    color: rgb(8, 77, 8);
+}
+.header-mid >input:focus{
+    background-color: white;
+    color: black;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-right span{
+    cursor: pointer;
+}
+.header-right > span>img{
+    cursor: pointer;
+    border-radius: 50%;
+}
+nav{
+    position: fixed;
+    top:20px;
+}
+footer{
+    background-color: rgb(211, 211, 211);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-left: 20px;
+}
+footer > span{
+    color: rgb(94, 94, 94);
+}
+footer > .material-symbols-outlined{
+    color: rgb(94, 94, 94);
+}
+.table-container{
+    overflow-y: auto;
+}
+table{
+    margin: 70px 0px 23px 0px;
+    border-collapse: collapse;
+    overflow-x:scroll;
+    table-layout: fixed;
+    overflow-y: scroll;
+}
+tr{
+    height: 22px;
+}
+th,td{
+    font-weight: 100;
+    font-size: 14px;
+    min-width: 65px;
+    border: 1px solid rgb(215, 215, 215);
+}
+th{
+    background-color: rgba(240, 240, 240, 0.705);
+    border: 1px solid rgb(160, 160, 160);
+}
+th:hover{
+    background-color: rgb(147, 191, 147);
+    color: black !important;
+    font-weight:400;
+}
+#head-row > th{
+    /* position: -webkit-sticky;
+    top: 50px; */  
+}
+td:hover{
+    cursor: cell;
+}
+td:focus{
+   outline:2.2px solid green;
+   padding: 2px;
+   cursor:text;
+}
+#rowColNum{
+    border: 1px solid gray;
+    width:80px;
+    text-align: center;
+    margin: 20px 10px;
+    padding: 2px;
+    height: 18px;
+}
+th:focus{
+    background-color: green;
+}
