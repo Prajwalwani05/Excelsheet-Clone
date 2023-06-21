@@ -113,6 +113,64 @@
     </header>
     <nav>
         <div id="rowColNum"></div>
+        <div class="cut-container">
+          <div class="paste">
+            <button id="paste">Paste</button>
+           </div>
+             <div class="cut-copy">
+               <p><button id="cut">Cut</button></p>
+              <p><button id="copy">Copy</button></p>
+             </div>
+        </div>
+        <div class="styles">
+            <div class="font">
+              <div class="fontFamily">
+                <select name="fontFamily" id="fontFamily">
+                  <option value="Calibri">Calibri</option>
+                  <option value="Arial">Arial</option>
+                  <option value="Verdana">Verdana</option>
+                  <option value="Hekvetica">Helvetica</option>
+                  <option value="Tahoma">Tahoma</option>
+                  <option value="Monaco">Monaco</option>
+                  <option value="Consolas">Consolas</option>
+                  <option value="Comic Sans MS">Comic Sans MS</option>
+                  <option value="Zapfinco">Zapfinco</option>
+                  <option value="Impact">Impact</option>
+                  <option value="Chiller">Chiller</option>
+                  <option value="Roboto">Roboto</option>
+  
+                </select>
+              </div>
+              <div class="fontSize">
+                <select name="fontSize" id="fontSize">
+                  <option value="8px">8</option>
+                  <option value="10px">10</option>
+                  <option value="12px">12</option>
+                  <option value="14px" selected>14</option>
+                  <option value="16px">16</option>
+                  <option value="18px">18</option>
+                  <option value="20px">20</option>
+                  <option value="22px">22</option>
+                  <option value="26px">26</option>
+                  <option value="30px">30</option>
+                  <option value="48px">48</option>
+                  <option value="70px">70</option>
+                </select>
+              </div>
+            </div>
+            <div class="style">
+              <button class="text-style" id="bold"><strong>B</strong></button>
+              <button class="text-style" id="italics">𝐼</button>
+              <button class="text-style" id="underline">U</button>
+              <button class="text-style" id="lineThrough"> ̶A̶</button>
+              <!-- <button class="color-btn" id="color-btn"><input type="color" id="favcolor" name="favcolor" value="#022B70"></button> -->
+            </div>
+        </div>  
+        <div class="colors">
+          <button class="color-btn" id="color-btn"><input type="color" class="txtColor" id="favcolor" name="favcolor" value="#FF4000"></button>
+          <button class="color-btn" id="color-btn"><input type="color" class="bgColor" id="favcolor" name="favcolor" value="#8CFF00"></button>
+          <p><span class="tC">A</span><span class="bC">Bg</span></p>
+        </div>
     </nav>
     <div class="table-container">
     <table id="my-table">
@@ -121,7 +179,8 @@
           <th class="empty-th"></th>
         </tr>
       </thead>
-      <tbody id="table-body"></tbody>
+      <tbody id="table-body">
+      </tbody>
     </table>
 </div>
     <footer>

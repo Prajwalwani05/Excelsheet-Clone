@@ -13,28 +13,30 @@ body::-webkit-scrollbar{
 }
 body::-webkit-scrollbar-track{
     background-color:gray;
-    border-radius: 20px;
 }
 body::-webkit-scrollbar-thumb{
-    background-color:green;
-    border-radius: 20px;
+    background-color:rgb(17, 93, 17);
 }
 /* Header Styling */
-
+header::-webkit-scrollbar{
+    display: none;
+}
 header{
    width: 100%;
-   background-color: green;
+   background-color: rgb(17, 93, 17);
    height: 40px;
    font-size: 15px;
    font-weight: 400;
    position: fixed;
    top: 0;
+   z-index: 1;
+   display: flex;
+   justify-content: space-between;
+   color: white;
+   overflow: hidden;
+   /* margin-bottom: 50px !important; */
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
+
 .header-left{
     display: flex;
     gap: 15px;
@@ -60,13 +62,13 @@ header{
     width: 400px;
     height: 27px;
     border-radius: 5px;
-    background-color: rgb(221, 244, 221);
+    background-color: rgb(208, 245, 208);
     outline: none;
     border: none;
     padding-left:5px;
 }
 .header-mid >input::placeholder{
-    color: rgb(8, 77, 8);
+    color: rgb(17, 93, 17);
 }
 .header-mid >input:focus{
     background-color: white;
@@ -84,9 +86,130 @@ header{
     cursor: pointer;
     border-radius: 50%;
 }
+/* navbar */
 nav{
     position: fixed;
-    top:20px;
+    top:0;
+    width: 100%;
+    border: 1px solid rgb(172, 172, 172);
+    background-color:rgb(211, 211, 211);
+    padding:5px 5px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+#rowColNum{
+    background-color: rgb(249, 246, 246);
+    border: 1px solid rgb(172, 172, 172);
+    width:50px;
+    height: 44px;
+    margin-right:5px;
+    padding: 3px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #022B70;
+}
+.cut-container{
+    width: 88px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    background-color: rgb(249, 246, 246);
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 8px;
+}
+.cut-container  #paste{
+   height: 40px;
+   padding: 5px;
+   border: none;
+   border-right:1px solid gray;
+   background-color: rgb(249, 246, 246);
+   cursor: pointer;
+}
+.cut-container #cut , #copy{
+    background-color: rgb(249, 246, 246);
+    border: none;
+    cursor: pointer;
+}
+#cut{
+    margin-bottom: 2px;
+}
+.styles{
+    background-color: rgb(249, 246, 246);
+    border: 1px solid rgb(172, 172, 172);
+    padding: 5px 10px;
+    height: 40px;
+    margin-left:5px;
+    border-radius: 8px;
+}
+.font{
+    display: flex;
+    gap: 7px;
+}
+#fontFamily,#fontSize{
+    cursor: pointer;
+}
+select{
+    background-color: rgb(27, 116, 27);
+    border-radius: 6px;
+    color: aliceblue;
+}
+.style{
+    margin-top: 1px;
+    text-align: center;
+}
+.style > .text-style{
+    border: none;
+    border-right: 1px solid gray;
+    padding-right:12px ;
+    background: none;
+    margin:6px;
+    text-align: center;
+    padding-right: 12px;
+    font-size: 13px;  
+}
+#lineThrough{
+    border: none;
+}
+#underline{
+    text-decoration: underline;
+}
+.color-btn{
+    border: none;
+    background-color: transparent;
+}
+#favcolor{
+    width: 40px;
+    height: 22px;
+    border: none;
+    cursor: pointer;
+    margin-left: 0px;
+    background-color: transparent;
+}
+.colors{
+    background-color: rgb(249, 246, 246);
+    border: 1px solid rgb(172, 172, 172);
+    padding: 5px 10px;
+    height: 40px;
+    margin-left:5px;
+    border-radius: 8px;
+}
+.colors p{
+    text-align: center;  
+}
+.tC{
+    margin-right: 35px;
+    padding: 0px 5px;
+    border-bottom: 3px solid;
+}
+.bC{
+    padding: 1px 3px;
+    border-bottom: 3px solid;
 }
 footer{
     background-color: rgb(211, 211, 211);
@@ -107,13 +230,20 @@ footer > .material-symbols-outlined{
 }
 .table-container{
     overflow-y: auto;
+    position: relative;
+    top: 6.4rem;
+    /* margin-top:20px; */
 }
 table{
-    margin: 70px 0px 23px 0px;
+    /* margin: 70px 0px 23px 0px; */
     border-collapse: collapse;
     overflow-x:scroll;
     table-layout: fixed;
     overflow-y: scroll;
+    margin-bottom: 24px;
+}
+tbody{
+    margin-top: 40px ;
 }
 tr{
     height: 22px;
@@ -129,30 +259,24 @@ th{
     border: 1px solid rgb(160, 160, 160);
 }
 th:hover{
-    background-color: rgb(147, 191, 147);
-    color: black !important;
+    background-color: rgb(17, 93, 17);
+    color: white !important;
     font-weight:400;
 }
-#head-row > th{
-    /* position: -webkit-sticky;
-    top: 50px; */  
+
+td{
+    color: black;
+    font-weight: 400;
 }
 td:hover{
     cursor: cell;
 }
 td:focus{
-   outline:2.2px solid green;
+   outline:2.2px solid rgb(17, 93, 17);
    padding: 2px;
    cursor:text;
 }
-#rowColNum{
-    border: 1px solid gray;
-    width:80px;
-    text-align: center;
-    margin: 20px 10px;
-    padding: 2px;
-    height: 18px;
-}
+
 th:focus{
-    background-color: green;
+    background-color: #022B70;
 }
